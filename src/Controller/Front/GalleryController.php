@@ -2,8 +2,8 @@
 
 namespace App\Controller\Front;
 
-use App\Entity\Gallery;
-use App\Repository\GalleryRepository;
+use App\Entity\Picture;
+use App\Repository\PictureRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,10 +14,10 @@ class GalleryController extends AbstractController
 {
     /**
      * @Route("front/pictures", name="front_pictures")
-     * @param GalleryRepository $galleryRepository
+     * @param PictureRepository $galleryRepository
      * @return Response
      */
-    public function pictures(GalleryRepository $galleryRepository)
+    public function pictures(PictureRepository $galleryRepository)
     {
         $pictures = $galleryRepository->findAll();
         return $this->render('front/gallery/pictures.html.twig', [
@@ -27,11 +27,11 @@ class GalleryController extends AbstractController
 
     /**
      * @route("front/gallery/show/{id}", name="front_gallery")
-     * @param GalleryRepository $galleryRepository
+     * @param PictureRepository $galleryRepository
      * @param $id
      * @return Response
      */
-    public function event(GalleryRepository $galleryRepository, $id)
+    public function event(PictureRepository $galleryRepository, $id)
     {
         $gallery = $galleryRepository->find($id);
 
@@ -42,16 +42,16 @@ class GalleryController extends AbstractController
 
     /**
      * @route("front/gallery/search", name="front_gallery_search")
-     * @param GalleryRepository $galleryRepository
+     * @param PictureRepository $galleryRepository
      * @param Request $request
      * @return Response
      */
-    public function searchByGallery(GalleryRepository $galleryRepository, Request $request)
+    public function searchByGallery(PictureRepository $galleryRepository, Request $request)
     {
         $search = $request->query->get('search');
         $pictures = $galleryRepository->getByWordInGallery($search);
 
-        return $this->render('front/gallery/search.html.twig', [
+        return $this->render('front/gallery/search_article.html.twig', [
             'search' => $search, 'events' => $pictures
         ]);
     }

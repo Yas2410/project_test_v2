@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\GalleryRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\PictureRepository")
  */
-class Gallery
+class Picture
 {
     /**
      * @ORM\Id()
@@ -55,7 +55,7 @@ class Gallery
         return $this;
     }
 
-    public function setGalleryFile(string $newFilename)
+    public function setPictureFile(string $newFilename)
     {
     }
 }

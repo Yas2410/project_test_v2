@@ -22,7 +22,7 @@ class ArticleController extends AbstractController
 cet affichage. */
 
     /**
-     * //* @Route("admin/articles", name="admin_article_list")
+     * //* @Route("/admin/articles", name="admin_articles_list")
      * @param ArticleRepository $articleRepository
      * @return Response
      */
@@ -38,7 +38,7 @@ Valable pour toutes les classes, à l'exception des entités. */
  qui me permet de sélectionner les évènements en BDD. */
 
         $articles = $articleRepository->findAll();
-        return $this->render('admin/article/articles.html.twig', [
+        return $this->render('admin/articles/articles.html.twig', [
             'articles' => $articles
         ]);
     }
@@ -56,7 +56,7 @@ Valable pour toutes les classes, à l'exception des entités. */
     {
         $article = $articleRepository->find($id);
 
-        return $this->render('admin/article/article.html.twig', [
+        return $this->render('admin/articles/article.html.twig', [
             'article' => $article
         ]);
     }
@@ -64,7 +64,7 @@ Valable pour toutes les classes, à l'exception des entités. */
 // Création d'une nouvelle route pour INSERER des articles.
 
     /**
-     * @route("admin/article/insert", name="admin_article_insert")
+     * @route("admin/article/insert", name="admin_insert_article")
      * @param Request $request
      * @param EntityManagerInterface $entityManager
      * @param $slugger
@@ -76,9 +76,9 @@ Valable pour toutes les classes, à l'exception des entités. */
         SluggerInterface $slugger
     )
     {
-// Création d'un nouvel article afin de le lier au formulaire.
+// Création d'un nouvel articles afin de le lier au formulaire.
         $article = new Article();
-// Création du formulaire que je lie au nouvel article.
+// Création du formulaire que je lie au nouvel articles.
         $formArticle = $this->createForm(ArticleType::class, $article);
 // Je demande à mon formulaire (ici $formArticle) de gérer les données POST.
         $formArticle->handleRequest($request);
@@ -108,60 +108,42 @@ Valable pour toutes les classes, à l'exception des entités. */
 // On enregistre le nom du fichier uploadé en BDD.
                 $article->setArticleFile($newFilename);
             }
-// Enfin, on persiste l'article
+// Enfin, on persiste l'articles
             $entityManager->persist($article);
             $entityManager->flush();
 
-// Création d'un message Flash indiquant que l'article a bien été créé :
-            $this->addFlash('success', 'Votre article a bien été créé !');
+// Création d'un message Flash indiquant que l'articles a bien été créé :
+            $this->addFlash('success', "L'article a bien été créé !");
 
         }
-        return $this->render('admin/article/insert.html.twig', [
+        return $this->render('admin/articles/insert_article.html.twig', [
             'formArticle' => $formArticle->createView()
         ]);
 
     }
 
-// Création d'une nouvelle route pour SUPPRIMER des articles.
+// Création d'une nouvelle route pour RECHERCHER des articles.
 
     /**
-     * @route("admin/article/delete", name="admin_article_delete")
+     * @route("admin/article/search", name="admin_search_article")
      * @param ArticleRepository $articleRepository
-     * @param EntityManagerInterface $entityManager
-     * @param $id
+     * @param Request $request
      * @return Response
      */
-    public function deleteArticle(
-        ArticleRepository $articleRepository,
-        EntityManagerInterface $entityManager,
-        $id
-    )
+    public function searchByArticle(ArticleRepository $articleRepository, Request $request)
     {
-        $article = $articleRepository->find($id);
-        $entityManager->remove($article);
-        $entityManager->flush();
+        $search = $request->query->get('search');
+        $articles = $articleRepository->getByWordInArticle($search);
 
-        return new Response("L'article a bien été supprimé !");
+        return $this->render('admin/articles/search_article.html.twig', [
+            'search' => $search, 'articles' => $articles
+        ]);
     }
-
-// Création d'une nouvelle route pour SUPPRIMER des articles via l'URL.
-    /**
-     * @route("admin/article/delete/{id}", name="admin_article_delete")
-     */
-/*  public function deleteEventUrl(ArticleRepository $articleRepository, EntityManagerInterface $entityManager, $id)
-    {
-        $article = $articleRepository->find($id);
-        $entityManager->remove($article);
-        $entityManager->flush();
-
-        return new Response("L'article a bien été supprimé !");
-    }
-*/
 
 // Création d'une nouvelle route pour METTRE A JOUR des articles.
 
     /**
-     * @route("admin/article/update/{id}", name="admin_article_update")
+     * @route("admin/article/update/{id}", name="admin_update_article")
      * @param Request $request
      * @param ArticleRepository $articleRepository
      * @param EntityManagerInterface $entityManager
@@ -182,30 +164,39 @@ Valable pour toutes les classes, à l'exception des entités. */
             $entityManager->persist($article);
             $entityManager->flush();
 
+            $this->addFlash('sucess', "L' article a bien été modifié !");
         }
 
-        return $this->render('admin/article/insert.html.twig', [
-            'formArticle' => $formArticle->createView()
+        return $this->render('admin/articles/update_article.html.twig', [
+            'formArticle'=>$formArticle->createView()
         ]);
     }
 
-
-// Création d'une nouvelle route pour RECHERCHER des articles.
+// Création d'une nouvelle route pour SUPPRIMER des articles.
 
     /**
-     * @route("admin/article/search", name="admin_article_search")
+     * @route("admin/article/delete/{id}", name="admin_delete_article")
      * @param ArticleRepository $articleRepository
+     * @param EntityManagerInterface $entityManager
      * @param Request $request
+     * @param $id
      * @return Response
      */
-    public function searchByArticle(ArticleRepository $articleRepository, Request $request)
+    public function deleteArticle(
+        Request $request,
+        ArticleRepository $articleRepository,
+        EntityManagerInterface $entityManager,
+        $id
+    )
     {
-        $search = $request->query->get('search');
-        $articles = $articleRepository->getByWordInArticle($search);
+        $article = $articleRepository->find($id);
+        $entityManager->remove($article);
+        $entityManager->flush();
 
-        return $this->render('admin/article/search.html.twig', [
-            'search' => $search, 'articles' => $articles
-        ]);
+        $this->addFlash('sucess', "L'article a bien été supprimé !");
+
+        return $this->redirectToRoute('admin_articles_list');
     }
+
 }
 

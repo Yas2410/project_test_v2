@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Gallery;
+use App\Entity\Picture;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
 /**
- * @method Gallery|null find($id, $lockMode = null, $lockVersion = null)
- * @method Gallery|null findOneBy(array $criteria, array $orderBy = null)
- * @method Gallery[]    findAll()
- * @method Gallery[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Picture|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Picture|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Picture[]    findAll()
+ * @method Picture[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class GalleryRepository extends ServiceEntityRepository
+class PictureRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Gallery::class);
+        parent::__construct($registry, Picture::class);
     }
 
     // /**
-    //  * @return Gallery[] Returns an array of Gallery objects
+    //  * @return Picture[] Returns an array of Picture objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class GalleryRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Gallery
+    public function findOneBySomeField($value): ?Picture
     {
         return $this->createQueryBuilder('g')
             ->andWhere('g.exampleField = :val')
@@ -47,7 +47,7 @@ class GalleryRepository extends ServiceEntityRepository
         ;
     }
     */
-    public function getByWordInGallery($search)
+    public function getByWordInPicture($search)
     {
     }
 }

@@ -5,7 +5,7 @@ namespace App\Controller\Front;
 use App\Entity\Article;
 use App\Repository\ArticleRepository;
 use App\Repository\EventRepository;
-use App\Repository\GalleryRepository;
+use App\Repository\PictureRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,13 +16,13 @@ class HomeParentsController extends AbstractController
      * @Route("/home", name="home_parents")
      * @param ArticleRepository $articleRepository
      * @param EventRepository $eventRepository
-     * @param GalleryRepository $galleryRepository
+     * @param PictureRepository $galleryRepository
      * @return Response
      */
     public function homeParents(
         ArticleRepository $articleRepository,
         EventRepository $eventRepository,
-        GalleryRepository $galleryRepository
+        PictureRepository $galleryRepository
     )
     {
         $lastArticles = $articleRepository->findBy([], ['id' => 'DESC'], 3, 0);

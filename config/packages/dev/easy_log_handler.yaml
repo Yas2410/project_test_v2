@@ -9,7 +9,7 @@ services:
 #        buffered:
 #            type:     buffer
 #            handler:  easylog
-#            channels: ['!event']
+#            channels: ['!events']
 #            level:    debug
 #        easylog:
 #            type: service

@@ -20,13 +20,13 @@ class EventController extends AbstractController
     public function events(EventRepository $eventRepository)
     {
         $events = $eventRepository->findAll();
-        return $this->render('front/event/events.html.twig', [
+        return $this->render('front/events/events.html.twig', [
             'events' => $events
         ]);
     }
 
     /**
-     * @route("front/event/show/{id}", name="front_event")
+     * @route("front/events/show/{id}", name="front_event")
      * @param EventRepository $eventRepository
      * @param $id
      * @return Response
@@ -35,13 +35,13 @@ class EventController extends AbstractController
     {
         $event = $eventRepository->find($id);
 
-        return $this->render('front/event/event.html.twig', [
-            'event' => $event
+        return $this->render('front/events/events.html.twig', [
+            'events' => $event
         ]);
     }
 
     /**
-     * @route("front/event/search", name="front_event_search")
+     * @route("front/events/search", name="front_event_search")
      * @param EventRepository $eventRepository
      * @param Request $request
      * @return Response
@@ -51,7 +51,7 @@ class EventController extends AbstractController
         $search = $request->query->get('search');
         $events = $eventRepository->getByWordInEvent($search);
 
-        return $this->render('front/event/search.html.twig', [
+        return $this->render('front/events/search_article.html.twig', [
             'search' => $search, 'events' => $events
         ]);
     }
