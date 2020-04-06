@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad342ab1-6a12-4459-85a4-a68f4fb5c57a" name="Default Changelist" comment="" />
+    <list default="true" id="ad342ab1-6a12-4459-85a4-a68f4fb5c57a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Front/EventController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Front/GalleryController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Front/HomeController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Front/HomeParentsController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/family/delete.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/family/families.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/family/family.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/family/search.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/family/update.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/gallery/pictures.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/article/article.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/article/articles.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/article/search.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/event/event.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/event/events.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/event/search.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/gallery/gallery.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/gallery/pictures.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/gallery/search.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/home.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/homeParents.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Admin/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/GalleryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/gallery/galleries.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Front/ArticleController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +38,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -126,6 +155,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1a7BbpRNA37po6ZfX8pe4NXTAYm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -133,12 +163,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller/Admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller/Front" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\project_test\src\Controller\Front" />
       <recent name="C:\wamp64\www\project_test\src\Controller\Admin" />
       <recent name="C:\wamp64\www\project_test" />
     </key>
@@ -155,7 +187,7 @@
       <updated>1586076825098</updated>
       <workItem from="1586076826674" duration="16535000" />
       <workItem from="1586112705980" duration="5390000" />
-      <workItem from="1586157695461" duration="2231000" />
+      <workItem from="1586157695461" duration="11055000" />
     </task>
     <servers />
   </component>
@@ -163,10 +195,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="497" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586090841483">
+    <state x="497" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586179023102">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="497" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586090841483" />
+    <state x="497" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586179023102" />
     <state x="504" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586114287961">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -175,6 +207,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586116148855" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1586163697241">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586163697241" />
     <state x="349" y="147" key="IDE.errors.dialog" timestamp="1586114316702">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

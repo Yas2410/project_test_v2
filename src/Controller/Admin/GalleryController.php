@@ -16,17 +16,17 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 class GalleryController extends AbstractController
 {
     /**
-     * //* @Route("admin/galleries", name="admin_gallery_list")
+     * //* @Route("admin/pictures", name="admin_gallery_list")
      * @param GalleryRepository $galleryRepository
      * @return Response
      */
 
-    public function galleries(GalleryRepository $galleryRepository)
+    public function pictures(GalleryRepository $galleryRepository)
     {
 
-        $galleries = $galleryRepository->findAll();
-        return $this->render('admin/gallery/galleries.html.twig', [
-            'galleries' => $galleries
+        $pictures = $galleryRepository->findAll();
+        return $this->render('admin/gallery/pictures.html.twig', [
+            'pictures' => $pictures
         ]);
     }
 
@@ -151,10 +151,10 @@ class GalleryController extends AbstractController
     public function searchByGallery(GalleryRepository $galleryRepository, Request $request)
     {
         $search = $request->query->get('search');
-        $galleries = $galleryRepository->getByWordInGallery($search);
+        $pictures = $galleryRepository->getByWordInGallery($search);
 
         return $this->render('admin/gallery/search.html.twig', [
-            'search' => $search, 'galleries' => $galleries
+            'search' => $search, 'pictures' => $pictures
         ]);
     }
 }
