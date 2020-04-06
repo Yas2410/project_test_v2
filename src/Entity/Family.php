@@ -49,9 +49,9 @@ class Family
     private $city;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Children", mappedBy="family")
+     * @ORM\OneToMany(targetEntity="Child", mappedBy="family")
      */
-    private $childrens;
+    private $children;
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Event", inversedBy="families")
@@ -65,7 +65,7 @@ class Family
 
     public function __construct()
     {
-        $this->childrens = new ArrayCollection();
+        $this->children = new ArrayCollection();
         $this->event = new ArrayCollection();
     }
 
@@ -147,30 +147,30 @@ class Family
     }
 
     /**
-     * @return Collection|Children[]
+     * @return Collection|Child[]
      */
-    public function getChildrens(): Collection
+    public function getChildren(): Collection
     {
-        return $this->childrens;
+        return $this->children;
     }
 
-    public function addChildren(Children $children): self
+    public function addChild(Child $child): self
     {
-        if (!$this->childrens->contains($children)) {
-            $this->childrens[] = $children;
-            $children->setFamily($this);
+        if (!$this->children->contains($child)) {
+            $this->children[] = $child;
+            $child->setFamily($this);
         }
 
         return $this;
     }
 
-    public function removeChildren(Children $children): self
+    public function removeChild(Child $child): self
     {
-        if ($this->childrens->contains($children)) {
-            $this->childrens->removeElement($children);
+        if ($this->children->contains($child)) {
+            $this->children->removeElement($child);
             // set the owning side to null (unless already changed)
-            if ($children->getFamily() === $this) {
-                $children->setFamily(null);
+            if ($child->getFamily() === $this) {
+                $child->setFamily(null);
             }
         }
 

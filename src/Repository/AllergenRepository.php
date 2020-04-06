@@ -47,4 +47,7 @@ class AllergenRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function getByWordInAllergen($search)
+    {
+    }
 }

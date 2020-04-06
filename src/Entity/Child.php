@@ -7,9 +7,9 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ChildrenRepository")
+ * @ORM\Entity(repositoryClass="ChildRepository")
  */
-class Children
+class Child
 {
     /**
      * @ORM\Id()
@@ -39,12 +39,12 @@ class Children
     private $sex;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Family", inversedBy="childrens")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Family", inversedBy="children")
      */
     private $family;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Allergen", inversedBy="childrens")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Allergen", inversedBy="children")
      */
     private $allergen;
 

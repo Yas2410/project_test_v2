@@ -24,13 +24,13 @@ class Allergen
     private $type;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Children", mappedBy="allergen")
+     * @ORM\ManyToMany(targetEntity="Child", mappedBy="allergen")
      */
-    private $childrens;
+    private $children;
 
     public function __construct()
     {
-        $this->childrens = new ArrayCollection();
+        $this->children = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -51,30 +51,34 @@ class Allergen
     }
 
     /**
-     * @return Collection|Children[]
+     * @return Collection|Child[]
      */
-    public function getChildrens(): Collection
+    public function getChildren(): Collection
     {
-        return $this->childrens;
+        return $this->children;
     }
 
-    public function addChildren(Children $children): self
+    public function addChild(Child $child): self
     {
-        if (!$this->childrens->contains($children)) {
-            $this->childrens[] = $children;
-            $children->addAllergen($this);
+        if (!$this->children->contains($child)) {
+            $this->children[] = $child;
+            $child->addAllergen($this);
         }
 
         return $this;
     }
 
-    public function removeChildren(Children $children): self
+    public function removeChild(Child $child): self
     {
-        if ($this->childrens->contains($children)) {
-            $this->childrens->removeElement($children);
-            $children->removeAllergen($this);
+        if ($this->children->contains($child)) {
+            $this->children->removeElement($child);
+            $child->removeAllergen($this);
         }
 
         return $this;
+    }
+
+    public function setAllergenFile(string $newFilename)
+    {
     }
 }

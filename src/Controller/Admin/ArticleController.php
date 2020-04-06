@@ -38,7 +38,7 @@ Valable pour toutes les classes, à l'exception des entités. */
  qui me permet de sélectionner les évènements en BDD. */
 
         $articles = $articleRepository->findAll();
-        return $this->render('admin/articles/articles.html.twig', [
+        return $this->render('admin/articles/children.html.twig', [
             'articles' => $articles
         ]);
     }
@@ -56,7 +56,7 @@ Valable pour toutes les classes, à l'exception des entités. */
     {
         $article = $articleRepository->find($id);
 
-        return $this->render('admin/articles/article.html.twig', [
+        return $this->render('admin/articles/child.html.twig', [
             'article' => $article
         ]);
     }
@@ -135,7 +135,7 @@ Valable pour toutes les classes, à l'exception des entités. */
         $search = $request->query->get('search');
         $articles = $articleRepository->getByWordInArticle($search);
 
-        return $this->render('admin/articles/search_article.html.twig', [
+        return $this->render('admin/articles/search_child.html.twig', [
             'search' => $search, 'articles' => $articles
         ]);
     }
@@ -167,7 +167,7 @@ Valable pour toutes les classes, à l'exception des entités. */
             $this->addFlash('sucess', "L' article a bien été modifié !");
         }
 
-        return $this->render('admin/articles/update_article.html.twig', [
+        return $this->render('admin/articles/update_child.html.twig', [
             'formArticle'=>$formArticle->createView()
         ]);
     }

@@ -51,7 +51,7 @@ class GalleryController extends AbstractController
         $search = $request->query->get('search');
         $pictures = $galleryRepository->getByWordInGallery($search);
 
-        return $this->render('front/gallery/search_article.html.twig', [
+        return $this->render('front/gallery/search_child.html.twig', [
             'search' => $search, 'events' => $pictures
         ]);
     }

@@ -51,7 +51,7 @@ class EventController extends AbstractController
         $search = $request->query->get('search');
         $events = $eventRepository->getByWordInEvent($search);
 
-        return $this->render('front/events/search_article.html.twig', [
+        return $this->render('front/events/search_child.html.twig', [
             'search' => $search, 'events' => $events
         ]);
     }

@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Children;
+use App\Entity\Child;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
 /**
- * @method Children|null find($id, $lockMode = null, $lockVersion = null)
- * @method Children|null findOneBy(array $criteria, array $orderBy = null)
- * @method Children[]    findAll()
- * @method Children[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Child|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Child|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Child[]    findAll()
+ * @method Child[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ChildrenRepository extends ServiceEntityRepository
+class ChildRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Children::class);
+        parent::__construct($registry, Child::class);
     }
 
     // /**
-    //  * @return Children[] Returns an array of Children objects
+    //  * @return Child[] Returns an array of Child objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class ChildrenRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Children
+    public function findOneBySomeField($value): ?Child
     {
         return $this->createQueryBuilder('c')
             ->andWhere('c.exampleField = :val')
@@ -47,4 +47,7 @@ class ChildrenRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function getByWordInChild($search)
+    {
+    }
 }

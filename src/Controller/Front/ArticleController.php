@@ -20,7 +20,7 @@ class ArticleController extends AbstractController
     public function articles(ArticleRepository $articleRepository)
     {
         $articles = $articleRepository->findAll();
-        return $this->render('front/articles/articles.html.twig', [
+        return $this->render('front/articles/children.html.twig', [
             'articles' => $articles
         ]);
     }
@@ -35,7 +35,7 @@ class ArticleController extends AbstractController
     {
         $article = $articleRepository->find($id);
 
-        return $this->render('front/articles/articles.html.twig', [
+        return $this->render('front/articles/children.html.twig', [
             'articles' => $article
         ]);
     }
@@ -51,7 +51,7 @@ class ArticleController extends AbstractController
         $search = $request->query->get('search');
         $articles = $articleRepository->getByWordInArticle($search);
 
-        return $this->render('front/articles/search_article.html.twig', [
+        return $this->render('front/articles/search_child.html.twig', [
             'search' => $search, 'articles' => $articles
         ]);
     }

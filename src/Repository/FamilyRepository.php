@@ -47,4 +47,7 @@ class FamilyRepository extends ServiceEntityRepository
         ;
     }
     */
+    public function getByWordInFamily($search)
+    {
+    }
 }
