@@ -3,20 +3,23 @@
 namespace App\Controller\Front;
 
 use App\Entity\Event;
+use App\Form\EventType;
 use App\Repository\EventRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 class EventController extends AbstractController
 {
     /**
-     * @Route("front/events", name="front_events")
+     * //* @Route("/parents/events", name="events")
      * @param EventRepository $eventRepository
      * @return Response
      */
+
     public function events(EventRepository $eventRepository)
     {
         $events = $eventRepository->findAll();
@@ -26,7 +29,7 @@ class EventController extends AbstractController
     }
 
     /**
-     * @route("front/events/show/{id}", name="front_event")
+     * @route("parents/event/show/{id}", name="event")
      * @param EventRepository $eventRepository
      * @param $id
      * @return Response
@@ -35,13 +38,13 @@ class EventController extends AbstractController
     {
         $event = $eventRepository->find($id);
 
-        return $this->render('front/events/events.html.twig', [
+        return $this->render('front/events/event.html.twig', [
             'events' => $event
         ]);
     }
 
     /**
-     * @route("front/events/search", name="front_event_search")
+     * @route("parents/event/search", name="search_event")
      * @param EventRepository $eventRepository
      * @param Request $request
      * @return Response
@@ -51,9 +54,8 @@ class EventController extends AbstractController
         $search = $request->query->get('search');
         $events = $eventRepository->getByWordInEvent($search);
 
-        return $this->render('front/events/search_child.html.twig', [
+        return $this->render('front/events/search_event.html.twig', [
             'search' => $search, 'events' => $events
         ]);
     }
-
 }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Bienvenue sur l'espace Parents de La Calinerie !{% endblock %}</title>
+</head>
+<body>
+<header class="container">
+    <h1>Bienvenue sur l'espace Parents de La Calinerie !</h1>
+</header>
+<article>
+    <h2>Les derniers articles ajoutés :</h2>
+    {% for article in articles %}
+        <h4>{{ article.title }}</h4>
+        <span> <em>{{ article.content }} </em></span>
+    {% endfor %}
+</article>
+<br/>
+<article>
+    <h2>Les derniers évènements ajoutés :</h2>
+    {% for event in events %}
+        <h4>{{ event.title }}</h4>
+        <span> <em>{{ event.content }} </em></span>
+    {% endfor %}
+</article>
+
+</body>
+</html>

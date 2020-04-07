@@ -2,26 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad342ab1-6a12-4459-85a4-a68f4fb5c57a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/AllergenController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/ChildController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/FamilyController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/allergens/allergen.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/allergens/allergens.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/allergens/insert_allergen.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/allergens/search_allergen.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/allergens/update_allergen.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Front/PictureController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/front/security/loginParents.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Admin/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Admin/ArticleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Front/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Front/ArticleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/Front/EventController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Front/EventController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Front/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Front/GalleryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Allergen.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Allergen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Children.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Child.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Front/GalleryController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Front/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Front/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Front/HomeParentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Front/HomeParentsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Family.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Family.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/AllergenRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/AllergenRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/ChildrenRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/ChildRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/FamilyRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/FamilyRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/home/dashboard.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/article/article.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/article/articles.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/article/search.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/event/event.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/event/events.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/event/search.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/gallery/gallery.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/gallery/pictures.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/gallery/search.html.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/home/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/front/homeParents.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/front/home/homeParents.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,19 +164,21 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Controller/Admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sf_library" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\project_test\templates\admin\home" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\project_test\templates\front\security" />
+      <recent name="C:\wamp64\www\project_test\templates\front" />
+      <recent name="C:\wamp64\www\project_test\src\Controller\Front" />
       <recent name="C:\wamp64\www\project_test\src\Controller\Admin" />
       <recent name="C:\wamp64\www\project_test\templates\admin" />
-      <recent name="C:\wamp64\www\project_test\templates\admin\allergens" />
-      <recent name="C:\wamp64\www\project_test\src\Controller\Front" />
-      <recent name="C:\wamp64\www\project_test" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\project_test\templates\front" />
+      <recent name="C:\wamp64\www\project_test\templates\front\home" />
+      <recent name="C:\wamp64\www\project_test\templates\admin\home" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -187,7 +193,8 @@
       <updated>1586076825098</updated>
       <workItem from="1586076826674" duration="16535000" />
       <workItem from="1586112705980" duration="5390000" />
-      <workItem from="1586157695461" duration="24634000" />
+      <workItem from="1586157695461" duration="24797000" />
+      <workItem from="1586243163599" duration="26985000" />
     </task>
     <task id="LOCAL-00001" summary="Controller files &amp; Template files Update">
       <created>1586181363526</created>
@@ -203,7 +210,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586200556657</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Controller files &amp; Template files Update + Security">
+      <created>1586204672273</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586204672273</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Controller files &amp; Template files Update + log">
+      <created>1586204740708</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1586204740708</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,33 +232,39 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Controller files &amp; Template files Update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Controller files &amp; Template files Update" />
+    <MESSAGE value="Controller files &amp; Template files Update + Security" />
+    <MESSAGE value="Controller files &amp; Template files Update + log" />
+    <option name="LAST_COMMIT_MESSAGE" value="Controller files &amp; Template files Update + log" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="497" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586201308127">
+    <state x="497" y="202" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1586268143329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="497" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586201308127" />
+    <state x="497" y="202" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1586268143329" />
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1586260479535">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1586260479535" />
     <state x="504" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1586203051321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="504" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1586203051321" />
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586116148855">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586267999797">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586116148855" />
-    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1586204671539">
+    <state x="499" y="167" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1586267999797" />
+    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1586204740128">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586204671539" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1586182684177">
+    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1586204740128" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1586262861414">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586182684177" />
-    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1586114316702">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1586262861414" />
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1586204810892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1586114316702" />
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1586204810892" />
     <state x="541" y="211" key="NewPhpClassDialog" timestamp="1586203026974">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -246,21 +273,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="352" y="85" width="981" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1586095917327" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1586204673872">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1586204742259">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586204673872" />
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1586157992635">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1586204742259" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1586243185528">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586157992635" />
+    <state x="444" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1586243185528" />
     <state x="390" y="0" width="759" height="824" key="find.popup" timestamp="1586200830028">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="390" y="0" width="759" height="824" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1586200830028" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1586103778132">
+    <state x="510" y="46" key="refactoring.ChangeSignatureDialog" timestamp="1586260485903">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586103778132" />
+    <state x="510" y="46" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1586260485903" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1586271484247">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1586271484247" />
   </component>
 </project>

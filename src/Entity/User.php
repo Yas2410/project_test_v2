@@ -3,10 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
  */
 class User implements UserInterface
 {
@@ -42,6 +44,11 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=50)
      */
     private $firstName;
+
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Family", inversedBy="user", cascade={"persist", "remove"})
+     */
+    private $family;
 
     public function getId(): ?int
     {
@@ -144,4 +151,19 @@ class User implements UserInterface
 
         return $this;
     }
+
+    public function getFamily(): ?Family
+    {
+        return $this->family;
+    }
+
+    public function setFamily(?Family $family): self
+    {
+        $this->family = $family;
+
+        return $this;
+    }
+
+
 }
+

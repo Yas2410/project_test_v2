@@ -13,25 +13,26 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeParentsController extends AbstractController
 {
     /**
-     * @Route("/home", name="home_parents")
+     * @Route("/parents", name="home_parents")
      * @param ArticleRepository $articleRepository
      * @param EventRepository $eventRepository
-     * @param PictureRepository $galleryRepository
+     * @param PictureRepository $pictureRepository
      * @return Response
      */
     public function homeParents(
         ArticleRepository $articleRepository,
         EventRepository $eventRepository,
-        PictureRepository $galleryRepository
+        PictureRepository $pictureRepository
     )
     {
         $lastArticles = $articleRepository->findBy([], ['id' => 'DESC'], 3, 0);
         $lastEvents = $eventRepository->findBy([], ['id' => 'DESC'], 3, 0);
-        return $this->render('front/homeParents.html.twig', [
+        $lastPictures = $pictureRepository->findBy([], ['id' => 'DESC'], 3, 0);
+        return $this->render('front/home/homeParents.html.twig', [
             'articles' => $lastArticles,
-            'events' => $lastEvents
+            'events' => $lastEvents,
+            'pictures' => $lastPictures
         ]);
-
 
     }
 }
