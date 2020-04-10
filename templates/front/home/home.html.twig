@@ -1,44 +1,78 @@
-{% block title %}Log in!{% endblock %}
+<!DOCTYPE html>
+<html lang="fr">
 
-{% block body %}
-    <form method="post" class="container justify-content-center" >
-        {% if error %}
-            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Yasemin Koçak">
+    <meta name="description"
+    content="Bienvenue à La Calinerie! Retrouvez toutes les informations utiles à l'accueil de votre enfant!
+    Le site vous propose également un espace parent dédié : Actualités, agenda, photos">
+    <meta name="keywords" content="Crèche, Enfants, Parents, Accueil, Jeux, Garde">
+    <link rel="icon" type="image/png" href="{{ asset('uploads/img/icon.png') }}">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Quicksand|Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/front/style.css') }}">
+    <title>{% block title %}Crèche Multi-Accueil LA CALINERIE{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
 
-        {% if app.user %}
-            <div class="mb-3 ml-5 mt-5" >
-                Bonjour {{ app.user.username }} ! <a href="{{ path('app_logout') }}">Se Déconnecter</a>
-            </div>
-        {% endif %}
-        <div class="form1" >
-            <h3>Veuillez vous authentifier</h3>
-            <label for="inputEmail">Email</label>
-            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+<body>
+
+<header class="cover">
+    <div class="element1">
+        <div class="logo">
+            <img src="{{ asset('uploads/img/logo.png') }}" alt="Logo La Calinerie" class="img-fluid">
+        </div>
+        <h1 class="textLogo">
+            <span id="t1">L</span>a Ca<span id="t2">l</span>ine<span id="t3">r</span>ie
+        </h1>
+    </div>
+</header>
+
+</body>
+</html>
+
+
+<form method="post" class="container justify-content-center">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3 ml-5 mt-5">
+            Bonjour {{ app.user.username }} ! <a href="{{ path('app_logout') }}">Se Déconnecter</a>
+        </div>
+    {% endif %}
+    <div class="form1">
+        <h3>BIENVENUE SUR L'ESPACE PARENTS !</h3>
+        <div><label for="inputEmail">Email</label>
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required
+                   autofocus>
+        </div>
+        <div>
             <label for="inputPassword">Mot de Passe</label>
             <input type="password" name="password" id="inputPassword" class="form-control" required>
-
-            <input type="hidden" name="_csrf_token"
-                   value="{{ csrf_token('authenticate') }}"
-            >
-
-            {#
-                Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-                See https://symfony.com/doc/current/security/remember_me.html
-
-                <div class="checkbox mb-3">
-                    <label>
-                        <input type="checkbox" name="_remember_me"> Remember me
-                    </label>
-                </div>
-            #}
-
-            <div  class="btn1">
-                <button class="btn btn-secondary" type="submit">
-                    Se Connecter
-                </button>
-            </div>
         </div>
-        <div><a href="{{ path ('app_register') }}"> - Première Connexion ? - </a></div>
-    </form>
-{% endblock %}
+        <input type="hidden" name="_csrf_token"
+               value="{{ csrf_token('authenticate') }}"
+        >
+
+        {#
+            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+            See https://symfony.com/doc/current/security/remember_me.html
+
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Remember me
+                </label>
+            </div>
+        #}
+
+        <div class="btn1">
+            <button class="btn btn-secondary" type="submit">
+                Se Connecter
+            </button>
+        </div>
+    </div>
+    <div><a href="{{ path ('app_register') }}"> - Première Connexion ? - </a></div>
+</form>
+

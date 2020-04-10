@@ -1,0 +1,49 @@
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.cover {
+  background-image: url("../../../uploads/img/cover.jpg");
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.element1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 125px;
+
+}
+
+.logo {
+  width: 30%;
+  margin-left: 20px;
+}
+
+.textLogo, #t1, #t2, #t3 {
+  font-family: 'Adequate', cursive;
+  font-size: 50px;
+  font-weight: bold;
+  color: $grey;
+  margin-top: 5px;
+}
+
+#t1 {
+  color: $blue;
+}
+
+#t2 {
+  color: $pink;
+}
+
+#t3 {
+  color: $green;
+}
+

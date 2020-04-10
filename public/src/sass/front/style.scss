@@ -1,0 +1,20 @@
+/*Colors used in the project*/
+$grey : #808080;
+$blue : #66C7D8;
+$pink : #FFC0CB;
+$green : #90EE90;
+
+/*General CSS  used in the project*/
+* {
+  font-family: Raleway, serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*HOME PAGE CSS*/
+@import "home";
+
+
